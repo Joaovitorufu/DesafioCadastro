@@ -3,7 +3,7 @@ import './styles.css';
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import NavBar from '../../components/NavBar/index.js';
-import api from '../../services/api';
+
 
 
 const MostraDados = () =>{

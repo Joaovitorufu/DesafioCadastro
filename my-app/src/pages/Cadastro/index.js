@@ -5,10 +5,12 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import api from '../../services/api';
 import NavBar from '../../components/NavBar/index.js';
+import { useHistory} from 'react-router-dom';
 
 
 const  Cadastro = () => {
 
+    const history = useHistory();
     //procurar os dados do formulário digitado
     async function submit(event ) {
         event.preventDefault();
@@ -34,18 +36,22 @@ const  Cadastro = () => {
             .then(function (response) {
               
               window.alert("enviado!");
+              history.push('/login');
+              
             })
             .catch(function (err) {
               
-              window.alert("nao enviado!");
+              window.alert("email já utilizado!");
             })
     }
    
     return(
-        <Container fluid>
+        <Container>
+            
             <NavBar/>
+            <div className="arrumaPad">
             <div className="formulario-centralizado">
-                <h2>Cadastro de Usuário</h2>
+                <h4>Cadastro de Usuário</h4>
                 <div className="formulario">
                     <Form>
 
@@ -78,6 +84,7 @@ const  Cadastro = () => {
                 </div>    
                
                 
+            </div>
             </div>
         </Container>
     

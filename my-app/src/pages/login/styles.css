@@ -1,15 +1,15 @@
 .formulario-centralizado{
-  position: absolute;
-  top: 60%;
+    position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
   border: 1px solid #000;
   background-color: lightgray;
 }
-.formulario-centralizado h4{
+.formulario-centralizado h2{
   text-align: center;
-  margin: 15px;
+  padding-top: 15px;
 }
 .formulario{
   padding: 1rem;

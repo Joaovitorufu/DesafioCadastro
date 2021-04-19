@@ -1,7 +1,10 @@
 const express = require('express');
 const User = require ('../models/user');
+const bcrypt = require('bcryptjs');
+
 
 const router = express.Router();
+
 
 
 //cadastrar usuário método POST
@@ -63,5 +66,23 @@ router.delete("/delete/:email", async (req, res) => {
     }
 });
 
+router.post('/authenticate', async (req, res)=>{
+    const {email,password} = req.body;
+
+    const user = await User.findOne({email}).select('+password');
+
+    if(!user){
+        return res.status(400).send({error:'usuário não existe!'});
+    }
+
+    if(!await bcrypt.compare(password , user.password)){
+        return res.status(400).send({error:'senha não bate!'});
+    }
+
+    user.password = undefined;
+
+
+    res.send({user});
+})
 
 module.exports = app => app.use('/auth', router);
