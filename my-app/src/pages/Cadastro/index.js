@@ -49,7 +49,7 @@ const  Cadastro = () => {
         <Container>
             
             <NavBar/>
-            <div className="arrumaPad">
+           
             <div className="formulario-centralizado">
                 <h4>Cadastro de Usuário</h4>
                 <div className="formulario">
@@ -85,7 +85,7 @@ const  Cadastro = () => {
                
                 
             </div>
-            </div>
+            
         </Container>
     
     
