@@ -1,0 +1,11 @@
+
+.nav-container li{
+    display: inline;
+    padding:20px 5px;
+
+}
+.nav-container li a{
+    text-decoration: none;
+    color: black;
+
+}
