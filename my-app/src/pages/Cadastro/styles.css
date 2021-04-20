@@ -5,6 +5,7 @@
   transform: translate(-50%, -50%);
   width: 50%;
   border: 1px solid #000;
+  margin: auto;
   background-color: lightgray;
 }
 .formulario-centralizado h4{

@@ -23,7 +23,7 @@ const  Cadastro = () => {
         //verificar se as senhas conferem
     if (password.toString() !== password2.toString())
     return(
-        window.alert("senha não confere")
+        window.alert("as senhas não conferem")
     );
 
         console.log(name, email, password);
@@ -46,11 +46,11 @@ const  Cadastro = () => {
     }
    
     return(
-        <Container>
+        <Container >
             
             <NavBar/>
            
-            <div className="formulario-centralizado">
+            <div className="formulario-centralizado" >
                 <h4>Cadastro de Usuário</h4>
                 <div className="formulario">
                     <Form>
